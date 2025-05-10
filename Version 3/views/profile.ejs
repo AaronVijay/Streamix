@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Profile</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #232526, #414345);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .profile-card {
+    position: relative;
+    background-color: #2c2f33;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    text-align: center;
+    }
+
+    .profile-avatar {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+      margin-left: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #7289da;
+    }
+
+    .profile-name {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .profile-info {
+      font-size: 16px;
+      margin: 5px 0;
+      color: #ccc;
+    }
+
+    .logout-btn {
+      margin-top: 25px;
+      background-color: #7289da;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 16px;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .logout-btn:hover {
+      background-color: #5a6ea3;
+    }
+    .edit-icon-circle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #444;  /* Slight contrast to card */
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.edit-icon-circle:hover {
+    background-color: #555;
+}
+
+.icon {
+    color: white;
+    font-size: 18px;
+}
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <img class="profile-avatar" src="/images/profilePhoto.png" alt="User Avatar" />
+    <div class="profile-name"><%= user.username %></div>
+
+    <div class="profile-info"><strong>Username:</strong> <%= user.username %></div>
+    <div class="profile-info"><strong>Email:</strong> <%= user.email %></div>
+    <div class="profile-info"><strong>Phone Number:</strong> <%= user.phone %></div>
+    <div class="profile-info"><strong>Gender:</strong> <%= user.gender %></div>
+
+    <a href="/profile/edit" class="edit-icon-circle">
+        <i class="ri-pencil-fill icon"></i>
+    </a>
+
+    <form action="/logout" method="get">
+      <button type="submit" class="logout-btn">Logout</button>
+    </form>
+  </div>
+</body>
+</html>
