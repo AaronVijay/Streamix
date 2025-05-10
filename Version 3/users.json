@@ -1,0 +1,52 @@
+[
+    {
+      "username": "aaron",
+      "email": "aaron@gmail.com",
+      "password": "123",
+      "gender": "Male",
+      "phone": "9876543210"
+    },
+    {
+      "username": "bhupesh",
+      "email": "bhupesh@gmail.com",
+      "password": "1234",
+      "gender": "Male",
+      "phone": "8765432109"
+    },
+    {
+      "username": "aaron",
+      "email": "aaron@gmail.com",
+      "password": "123",
+      "gender": "Male",
+      "phone": "7654321098"
+    },
+    {
+      "username": "aaron1755",
+      "email": "aaron@cgmail.com",
+      "password": "111",
+      "gender": "Male",
+      "phone": "6543210987"
+    },
+    {
+      "username": "aa",
+      "email": "aa@gmail.com",
+      "password": "11",
+      "gender": "Female",
+      "phone": "9876501234"
+    },
+    {
+      "username": "bb",
+      "email": "bb@gmail.com",
+      "password": "22",
+      "gender": "Male",
+      "phone": "9876505678"
+    },
+    {
+      "username": "cc",
+      "email": "cc@gmail.com",
+      "password": "33",
+      "gender": "Female",
+      "phone": "9876509999"
+    }
+  ]
+  
