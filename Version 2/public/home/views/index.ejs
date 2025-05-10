@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--=============== REMIXICONS ===============-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+
+   <!--=============== SWIPER CSS ===============-->
+   <link rel="stylesheet" href="/swiper-bundle.min.css">
+
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="/styles.css">
+
+   <title>Responsive movie dashboard</title>
+</head>
+<body>
+   <img src="/images/captainAmericaOrgBanner.jpg" alt="banner image" class="bg__image">
+   <div class="bg__blur"></div>
+
+   <!--==================== HEADER ====================-->
+   <header class="header" id="header">
+      <div class="header__content">
+         <a href="#" class="header_logo"></a>
+
+         <div class="header__actions">
+            <i class="ri-notification-2-line"></i>
+            <i class="ri-account-circle-line"></i>
+
+            <div class="header__menu" id="header-menu">
+               <i class="ri-menu-line"></i>
+            </div>
+         </div>
+      </div>
+
+      <form action="" class="header__search">
+         <i class="ri-search-line"></i>
+         <input type="search" placeholder="Search movies" class="header__input">
+      </form>
+   </header>
+
+   <!--==================== NAV ====================-->
+   <nav class="nav" id="nav">
+      <div class="nav__menu">
+         <a href="#" class="nav__logo">Streamix</a>
+
+         <ul class="nav__list">
+            <li class="nav__item">
+               <a href="#" class="nav__link">
+                  <i class="ri-home-5-line"></i> <span>Home</span>
+               </a>
+            </li>
+
+            <li class="nav__item">
+               <a href="#" class="nav__link">
+                  <i class="ri-movie-line"></i> <span>Movies</span>
+               </a>
+            </li>
+
+            <li class="nav__item">
+               <a href="#" class="nav__link">
+                  <i class="ri-film-line"></i> <span>Series</span>
+               </a>
+            </li>
+
+            <li class="nav__item">
+               <a href="#" class="nav__link">
+                  <i class="ri-heart-3-line"></i> <span>Favorites</span>
+               </a>
+            </li>   
+         </ul>
+
+         <div>
+            <h3 class="nav__title">Account</h3>
+            <ul class="nav__list">
+               <li class="nav__item">
+                  <a href="/profile" class="nav__link">
+                     <i class="ri-account-circle-line"></i> <span>Profile</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </div>
+
+      <a href="#" class="nav__link">
+         <i class="ri-logout-box-line"></i> <span>Log Out</span>
+      </a>
+
+      <div class="nav__close" id="nav-close">
+         <i class="ri-close-line"></i>
+      </div>
+   </nav>
+
+   <!--==================== DASHBOARD ====================-->
+   <main class="main">
+      <!--==================== BANNER ====================-->
+      <section class="banner">
+         <article class="banner__card">
+            <a href="#" class="banner__link">
+               <img src="/images/captainAmericaOrgBanner.jpg" alt="banner image" class="banner__img">
+               <div class="banner__shadow"></div>
+
+               <div class="banner__data">
+                  <h2 class="banner__title">Captain America</h2>
+                  <span class="banner__category">Action</span>
+               </div>
+            </a>
+         </article>
+      </section>
+
+      <!--==================== MOVIES ====================-->
+      <section class="movie">
+         <h3 class="card__title">Movies</h3>
+
+         <div class="movie__swiper swiper">
+            <div class="swiper-wrapper">
+               <!-- Repeat for each movie -->
+               <article class="card__article swiper-slide">
+                  <a href="#" class="card__link">
+                     <img src="/images/captainAmericaOrgMovie.jpg" alt="movie 1" class="card__img">
+                     <div class="card__shadow"></div>
+                     <div class="card__data">
+                        <h3 class="card__name">Captain America</h3>
+                        <span class="card__category">Action</span>
+                     </div>
+                     <i class="ri-heart-3-line card__like"></i>
+                  </a>
+               </article>
+
+               <article class="card__article swiper-slide">
+                  <a href="#" class="card__link">
+                     <img src="/images/Sonic3.jpg" alt="movie 2" class="card__img">
+                     <div class="card__shadow"></div>
+                     <div class="card__data">
+                        <h3 class="card__name">Sonic 3</h3>
+                        <span class="card__category">Science/Fiction</span>
+                     </div>
+                     <i class="ri-heart-3-line card__like"></i>
+                  </a>
+               </article>
+               
+               <article class="card__article swiper-slide">
+                  <a href="#" class="card__link">
+                      <img src="/images/witcherOrg.jpg" alt="movie 3" class="card__img">
+                      <div class="card__shadow"></div>
+
+                      <div class="card__data">
+                          <h3 class="card__name">The Witcher</h3>
+                          <span class="card__category">Animation</span>
+                      </div>
+
+                      <i class="ri-heart-3-line card__like"></i>
+                  </a>
+              </article>
+
+              <article class="card__article swiper-slide">
+                  <a href="/movies/BackInAction.mp4" class="card__link">
+                      <img src="/images/backinactionOrg.jpg" alt="movie 4" class="card__img">
+                      <div class="card__shadow"></div>
+
+                      <div class="card__data">
+                          <h3 class="card__name">Back in Action</h3>
+                          <span class="card__category">Action</span>
+                      </div>
+
+                      <i class="ri-heart-3-line card__like"></i>
+                  </a>
+              </article>
+
+              <article class="card__article swiper-slide">
+                  <a href="#" class="card__link">
+                      <img src="/images/dontdie.jpg" alt="movie 5" class="card__img">
+                      <div class="card__shadow"></div>
+
+                      <div class="card__data">
+                          <h3 class="card__name">Don't Die</h3>
+                          <span class="card__category">Documentary</span>
+                      </div>
+
+                      <i class="ri-heart-3-line card__like"></i>
+                  </a>
+              </article>
+               <!-- Add remaining movie cards similarly... -->
+
+            </div>
+         </div>
+      </section>
+
+      <!--==================== NEW ====================-->
+      <section class="new">
+         <h3 class="card__title">Series</h3>
+
+         <div class="new__swiper swiper">
+            <div class="swiper-wrapper">
+               <article class="new__card card__article swiper-slide">
+                  <a href="#" class="card__link">
+                     <img src="/images/squidgame.jpg" alt="new image 1" class="card__img">
+                     <div class="card__shadow"></div>
+                     <div class="new__data card__data">
+                        <h3 class="card__name">Squid Game</h3>
+                        <span class="card__category">Action/Thriller</span>
+                     </div>
+                  </a>
+               </article>
+
+               <article class="new__card card__article swiper-slide">
+                  <a href="#" class="card__link">
+                      <img src="/images/blueEyeSamurai.jpg" alt="new image 2" class="card__img">
+                      <div class="card__shadow"></div>
+
+                      <div class="new__data card__data">
+                          <h3 class="card__name">Blue Eye Samurai</h3>
+                          <span class="card__category">Animation</span>
+                      </div>
+                  </a>
+              </article>
+
+              <article class="new__card card__article swiper-slide">
+                  <a href="#" class="card__link">
+                      <img src="/images/breakingBad.jpg" alt="new image 3" class="card__img">
+                      <div class="card__shadow"></div>
+
+                      <div class="new__data card__data">
+                          <h3 class="card__name">Breaking Bad</h3>
+                          <span class="card__category">Crime/Drama</span>
+                      </div>
+                  </a>
+              </article>
+
+              <article class="new__card card__article swiper-slide">
+                  <a href="#" class="card__link">
+                      <img src="/images/peakyblinders.jpg" alt="new image 4" class="card__img">
+                      <div class="card__shadow"></div>
+
+                      <div class="new__data card__data">
+                          <h3 class="card__name">Peaky Blinders</h3>
+                          <span class="card__category">Crime/Drama</span>
+                      </div>
+                  </a>
+              </article>
+
+              <article class="new__card card__article swiper-slide">
+                  <a href="#" class="card__link">
+                      <img src="/images/reacher.jpg" alt="new image 5" class="card__img">
+                      <div class="card__shadow"></div>
+
+                      <div class="new__data card__data">
+                          <h3 class="card__name">Reacher</h3>
+                          <span class="card__category">Action</span>
+                      </div>
+                  </a>
+              </article>
+
+              <article class="new__card card__article swiper-slide">
+                  <a href="#" class="card__link">
+                      <img src="/images/mirzapur.jpg" alt="new image 6" class="card__img">
+                      <div class="card__shadow"></div>
+
+                      <div class="new__data card__data">
+                          <h3 class="card__name">Mirzapur</h3>
+                          <span class="card__category">Crime/Action</span>
+                      </div>
+                  </a>
+              </article>
+
+            </div>
+         </div>
+
+         <!-- Pagination -->
+         <div class="swiper-pagination"></div>
+      </section>
+   </main>
+
+   <!--=============== SWIPER JS ===============-->
+   <script src="/swiper-bundle.min.js"></script>
+
+   <!--=============== MAIN JS ===============-->
+   <script src="/main.js"></script>
+</body>
+</html>
