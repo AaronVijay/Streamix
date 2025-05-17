@@ -34,7 +34,7 @@ if (mongoose.connection.readyState === 0) {
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-// Serve static files
+//static files
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Global to hold current user (temporary)
@@ -57,22 +57,7 @@ app.get('/', (req, res) => {
     res.redirect('/login');
 });
 
-//old
-// app.post('/login', async (req, res) => {
-//     const { username, password } = req.body;
 
-//     try {
-//         const user = await User.findOne({ username, password });
-//         if (!user) {
-//             return res.send('Invalid credentials');
-//         }
-
-//         req.session.user = user;
-//         res.redirect('/main');
-//     } catch (err) {
-//         res.status(500).send('Server error');
-//     }
-// });
 
 
 app.post('/login', async (req, res) => {
@@ -94,7 +79,7 @@ app.post('/login', async (req, res) => {
 app.post('/register', async (req, res) => {
     const { username, password, email, phone, gender, dob } = req.body;
 
-    console.log(req.body); // Log to see if dob is being sent correctly
+    console.log(req.body); 
 
     try {
         const existingUser = await User.findOne({ username });
@@ -117,15 +102,7 @@ app.get('/logout', (req, res) => {
     });
 });
 
-//Profile page route
-//old
-// app.get('/profile', (req, res) => {
-//     if (!req.session.user) {
-//         return res.redirect('/login');
-//     }
 
-//     res.render('profile', { user: req.session.user });
-// });
 
 
 
@@ -177,17 +154,28 @@ app.post('/profile/:id/edit', async (req, res) => {
 });
 
 
-// Movie route (for playing, not downloading)
-app.get('/movies/:movieFile', (req, res) => {
+//movie route
+app.get('/movies/video/:movieFile', (req, res) => {
     const movieFile = req.params.movieFile;
     const moviePath = path.join(__dirname, 'public', 'movies', movieFile);
 
-    res.sendFile(moviePath, { headers: { 'Content-Type': 'video/mp4' } }, (err) => {
+    // Check if file exists
+    fs.access(moviePath, fs.constants.F_OK, (err) => {
         if (err) {
-            res.status(404).send('Movie not found');
+            console.error('Movie file not found:', moviePath);
+            return res.status(404).send('Movie file not found');
         }
+
+        // Force browser to treat it as inline media
+        res.setHeader('Content-Type', 'video/mp4');
+        res.setHeader('Content-Disposition', 'inline');  // IMPORTANT
+        res.sendFile(moviePath);
     });
 });
+
+
+
+
 
 // Start server
 const port = 3400;
